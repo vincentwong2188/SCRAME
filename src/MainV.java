@@ -25,7 +25,7 @@ public class MainV {
 
                     System.out.println("The matriculation number of the student is " + stud.getMatric());
 
-                    
+
 
 
                     break;
