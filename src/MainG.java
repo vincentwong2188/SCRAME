@@ -1,3 +1,7 @@
 public class MainG {
-    System.out.println("G")
+    public static void main(String[] args) {
+
+        System.out.println("G");
+    }
 }
+
