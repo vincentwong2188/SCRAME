@@ -23,6 +23,8 @@ public class Student {
         this.matric=matric;
     }
 
+    public static boolean validateMatric(){return true;}
+
     public Course[] getCourses(){
         return courses;
     }
