@@ -35,7 +35,7 @@ public class Student {
 
     public Assessment[] filllistAssessments(){ //get an array of assessments for this student
         for(int i=0;i<courses.length;i++) {
-            String courseCode=courses[i].getcourseCode(); //to be implemented
+            String courseCode=courses[i].getCourseCode(); //to be implemented
             listAssessments[i]= new Assessment(courseCode);
             System.out.println("Please enter the student's Exam Marks:");
             double examMark = sc.nextDouble();
