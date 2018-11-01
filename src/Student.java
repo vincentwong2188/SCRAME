@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Student {
     private int matric;
-    private Course[] courses; //can i just use courseCode instead of an array of course obj
+    private String[] courseCodes; //can i just use courseCode instead of an array of course obj
     private Assessment[] listAssessments;
 
     Scanner sc=new Scanner(System.in);
@@ -10,9 +10,9 @@ public class Student {
     public Student(){
     }
 
-    public Student( int matric, Course[] courses){
+    public Student( int matric, String[] courseCodes){
         this.matric=matric;
-        this.courses=courses;
+        this.courseCodes= courseCodes;
     }
 
     public int getMatric(){
@@ -25,17 +25,17 @@ public class Student {
 
     public static boolean validateMatric(String matric){return true;}
 
-    public Course[] getCourses(){
-        return courses;
+    public String[] getCourseCodes(){
+        return courseCodes;
     }
 
-    public void setCourses(Course[] courses){
-        this.courses=courses;
+    public void setCourses(String[] courseCodes){
+        this.courseCodes=courseCodes;
     }
 
-    public Assessment[] filllistAssessments(){ //get an array of assessments for this student
-        for(int i=0;i<courses.length;i++) {
-            String courseCode=courses[i].getCourseCode(); //to be implemented
+    public Assessment[] fillListAssessments(){ //get an array of assessments for this student
+        for(int i=0;i<courseCodes.length;i++) {
+            String courseCode=courseCodes[i]; //to be implemented
             listAssessments[i]= new Assessment(courseCode);
             System.out.println("Please enter the student's Exam Marks:");
             double examMark = sc.nextDouble();
