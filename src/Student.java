@@ -1,17 +1,22 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Student {
     private int matric;
-    private String[] courseCodes; //can i just use courseCode instead of an array of course obj
+    private ArrayList<String> courseCodes; //can i just use courseCode instead of an array of course obj
     private Assessment[] listAssessments;
 
     Scanner sc=new Scanner(System.in);
 
-    public Student(int matric){
-        this.matric=matric;
+    public Student(){
     }
 
-    public Student( int matric, String[] courseCodes){
+    public Student(int matric){
+        this.matric=matric;
+        courseCodes= new ArrayList<>();
+    }
+
+    public Student( int matric, ArrayList<String> courseCodes){
         this.matric=matric;
         this.courseCodes= courseCodes;
     }
@@ -26,17 +31,17 @@ public class Student {
 
     public static boolean validateMatric(String matric){return true;}
 
-    public String[] getCourseCodes(){
+    public ArrayList<String> getCourseCodes(){
         return courseCodes;
     }
 
-    public void setCourses(String[] courseCodes){
-        this.courseCodes=courseCodes;
+    public void setCourses(String courseCode){
+        this.courseCodes.add(courseCode);
     }
 
     public Assessment[] fillListAssessments(){ //get an array of assessments for this student
-        for(int i=0;i<courseCodes.length;i++) {
-            String courseCode=courseCodes[i]; //to be implemented
+        for(int i=0;i<courseCodes.size();i++) {
+            String courseCode = courseCodes.get(i); //to be implemented
             listAssessments[i]= new Assessment(courseCode);
             System.out.println("Please enter the student's Exam Marks:");
             double examMark = sc.nextDouble();
