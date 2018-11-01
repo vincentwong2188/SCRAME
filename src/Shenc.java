@@ -4,9 +4,11 @@ public class Shenc {
     public static void main(String[] args){
         System.out.println("This is mine no touchie!");
 
-        ArrayList<Course> courseList = new ArrayList<>(0);
+        ArrayList <Lecture> lectureList = new ArrayList<>(0);
 
-        ArrayList<Student> studentList = new ArrayList<>(0);
-        //studentList.add();
+        lectureList.add(new Lecture("SEP2001", 2230, "LT4", "SIM WEE WEE"));
+        lectureList.add(new Lecture("SSP2010", 1230, "LT2", "ABCDEFG"));
+
+        System.out.println(lectureList.get(0).getClassID());
     }
 }
