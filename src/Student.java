@@ -23,7 +23,7 @@ public class Student {
         this.matric=matric;
     }
 
-    public static boolean validateMatric(){return true;}
+    public static boolean validateMatric(String matric){return true;}
 
     public Course[] getCourses(){
         return courses;

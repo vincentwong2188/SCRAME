@@ -111,7 +111,7 @@ public class Lesson {
      * @return Returns 0 if successful, 1 if student does not exist, 2 if student is already in the class.
      */
     public int addStudent(ArrayList<Student> data, String studentId){
-        if(data.checkStudent(studentId)){
+        if(data.get(0).validateMatric(studentId)){
             for(int i = 0; i < studentList.size(); i++){
                 if(studentList.get(i).equals(studentId)){
                     return 2;
