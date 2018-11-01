@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * Represents a tutorial and a lab. Is a subclass of Lesson.
  * @author Shen Chen

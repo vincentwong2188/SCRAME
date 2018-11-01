@@ -7,10 +7,10 @@ public class Student {
 
     Scanner sc=new Scanner(System.in);
 
-    public Students(){
+    public Student(){
     }
 
-    public Students( int matric, Course[] courses){
+    public Student( int matric, Course[] courses){
         this.matric=matric;
         this.courses=courses;
     }

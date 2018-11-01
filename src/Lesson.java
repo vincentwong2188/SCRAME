@@ -110,7 +110,7 @@ public class Lesson {
      * @param studentId The unique identifier of the student.
      * @return Returns 0 if successful, 1 if student does not exist, 2 if student is already in the class.
      */
-    public int addStudent(studentDatabase data, String studentId){
+    public int addStudent(ArrayList<Student> data, String studentId){
         if(data.checkStudent(studentId)){
             for(int i = 0; i < studentList.size(); i++){
                 if(studentList.get(i).equals(studentId)){
