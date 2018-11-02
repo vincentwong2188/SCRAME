@@ -6,6 +6,7 @@ public class zach {
         Student gwen = new Student(123);
         gwen.setCourses("algo");
         System.out.println(gwen.getCourseCodes());
-
+        System.out.println(gwen.fillAssessments());
+        gwen.printTranscript();
     }
 }
