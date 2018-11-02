@@ -8,7 +8,7 @@ public abstract class Course {
     private int takenSlots;
     private int totalSlots;
 
-    public abstract void Lecture();
+    public abstract void lecture();
 
     Scanner sc = new Scanner(System.in);
     ArrayList<Course> labList = new ArrayList<>(); // objects instantiated will include courseCode + details which is variable
