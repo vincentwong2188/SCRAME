@@ -8,6 +8,12 @@ public abstract class Course {
     private int takenSlots;
     private int totalSlots;
 
+    public Course(String courseCode, String professor, int takenSlots, int totalSlots){
+        this.courseCode = courseCode;
+        this.professor = professor;
+        this.takenSlots = takenSlots;
+        this.totalSlots = totalSlots;
+    }
     public abstract void lecture();
 
     Scanner sc = new Scanner(System.in);
